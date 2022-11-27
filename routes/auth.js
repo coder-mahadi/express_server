@@ -1,4 +1,4 @@
-// File Require
+// File Require(Default)
 const express = require("express")
 const router = express.Router()
 
@@ -10,5 +10,5 @@ const {
 //Routes
 router.get("/home", resServer)
 
-// Router Exports
+// Router Exports(Default)
 module.exports = router
