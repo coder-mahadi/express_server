@@ -32,6 +32,9 @@ mongoose
   .then(() => console.log("Database connected"))
   .catch((err) => console.log(err))
 
+// Routes Middleware (important)
+readdirSync("./routes").map(file => app.use("/api/v1", require(`./routes/${file}`)))
+
 // Server Listen
 const port = process.env.PORT || 8000
 app.listen(port, () => {
